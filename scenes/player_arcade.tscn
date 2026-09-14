@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ckkhyntums1v0"]
+
+[ext_resource type="Script" uid="uid://dp1iiaiqk1cu" path="res://scripts/player_arcade.gd" id="1_62wcl"]
+
+[node name="PlayerArcade" type="CharacterBody2D" unique_id=1147089591]
+script = ExtResource("1_62wcl")
