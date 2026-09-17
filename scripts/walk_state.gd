@@ -4,7 +4,7 @@ extends NodeState
 @export var character_animated_sprite: AnimatedSprite2D
 @export var outfit_animated_sprite: AnimatedSprite2D
 @export var hair_animated_sprite: AnimatedSprite2D
-@export var speed: int = 40
+@export var speed: int = 60
 
 func _on_physics_process(_delta: float) -> void:
 	var direction: Vector2 = GameInputEvents.movement_input()

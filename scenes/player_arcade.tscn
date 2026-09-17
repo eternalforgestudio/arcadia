@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://ckkhyntums1v0"]
 
 [ext_resource type="Script" uid="uid://dp1iiaiqk1cu" path="res://scripts/player_arcade.gd" id="1_62wcl"]
-[ext_resource type="Texture2D" uid="uid://drilhj0xkeugo" path="res://assets/MetroCity/CharacterModel/Character Model.png" id="2_jbsty"]
-[ext_resource type="Texture2D" uid="uid://b3gnhvybebpng" path="res://assets/MetroCity/Outfits/Outfit5.png" id="3_hecyb"]
-[ext_resource type="Texture2D" uid="uid://ce66viboaodgn" path="res://assets/MetroCity/Hair/Hairs.png" id="4_uodr6"]
+[ext_resource type="Texture2D" uid="uid://drilhj0xkeugo" path="res://assets/MetroCity/Characters/CharacterModel/Character Model.png" id="2_jbsty"]
+[ext_resource type="Texture2D" uid="uid://b3gnhvybebpng" path="res://assets/MetroCity/Characters/Outfits/Outfit5.png" id="3_hecyb"]
+[ext_resource type="Texture2D" uid="uid://ce66viboaodgn" path="res://assets/MetroCity/Characters/Hair/Hairs.png" id="4_uodr6"]
 [ext_resource type="Script" uid="uid://c1f7yh228rq3r" path="res://scripts/node_state_machine.gd" id="5_6ya2o"]
-[ext_resource type="Script" uid="uid://dkw2sf12jb03q" path="res://idle_state.gd" id="6_ds7pp"]
+[ext_resource type="Script" uid="uid://dkw2sf12jb03q" path="res://scripts/idle_state.gd" id="6_ds7pp"]
 [ext_resource type="Script" uid="uid://cu56v0srsde32" path="res://scripts/walk_state.gd" id="7_hkkiq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ya2o"]
@@ -175,7 +175,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_back",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -198,7 +198,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_front",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -221,7 +221,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -244,7 +244,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsxxw"]
@@ -414,7 +414,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_back",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -437,7 +437,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_front",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -460,7 +460,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -483,7 +483,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7gucj"]
@@ -653,7 +653,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_back",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -676,7 +676,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_front",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -699,7 +699,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -722,33 +722,42 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bj4t2"]
 size = Vector2(12, 12)
 
 [node name="PlayerArcade" type="CharacterBody2D" unique_id=1147089591]
+y_sort_enabled = true
 script = ExtResource("1_62wcl")
 
 [node name="CharacterAnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1013843645]
+position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_bj4t2")
-animation = &"idle_left"
+animation = &"walk_right"
 autoplay = "idle_front"
 
 [node name="OutfitAnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=247217439]
+position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_mqvok")
-animation = &"walk_left"
+animation = &"walk_right"
 autoplay = "idle_front"
 
 [node name="HairAnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1468990908]
+position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_0h62n")
-animation = &"walk_left"
+animation = &"walk_right"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508119269]
-position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_bj4t2")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1112178929]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=246144218 node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("5_6ya2o")
