@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://ckjs3ufyc313x"]
 
+[ext_resource type="PackedScene" uid="uid://ckkhyntums1v0" path="res://scenes/player_arcade.tscn" id="1_pig0t"]
+
 [node name="Arcade" type="Node2D" unique_id=931136075]
+
+[node name="PlayerArcade" parent="." unique_id=1147089591 instance=ExtResource("1_pig0t")]
