@@ -1,21 +1,19 @@
-[gd_scene format=4 uid="uid://ckjs3ufyc313x"]
+[gd_resource type="TileSet" format=3 uid="uid://dfi4ckdb4aqwd"]
 
-[ext_resource type="TileSet" uid="uid://dn6yrp68kumvx" path="res://tilesets/arcade_interior.tres" id="1_me10n"]
-[ext_resource type="PackedScene" uid="uid://ckkhyntums1v0" path="res://scenes/player_arcade.tscn" id="1_pig0t"]
-[ext_resource type="Texture2D" uid="uid://fy2l36pif76j" path="res://assets/MetroCity/Interior/Home/Carpet-Sheet.png" id="2_xwleh"]
-[ext_resource type="Texture2D" uid="uid://dxi1cc3nrsn0" path="res://assets/MetroCity/Interior/Home/Chimney1-Sheet.png" id="3_n02mf"]
-[ext_resource type="Texture2D" uid="uid://dfl8vf1jg7jlf" path="res://assets/MetroCity/Interior/Home/Paintings1-Sheet.png" id="4_fgq0x"]
-[ext_resource type="Texture2D" uid="uid://cve7w8cyk1t5a" path="res://assets/MetroCity/Interior/Home/Paintings-Sheet.png" id="5_1l4im"]
-[ext_resource type="Texture2D" uid="uid://c4650d5eald25" path="res://assets/MetroCity/Interior/Home/Chimney-Sheet.png" id="6_t8f1g"]
-[ext_resource type="Texture2D" uid="uid://wwp4dq8dxv8x" path="res://assets/MetroCity/Interior/Home/Cupboard-Sheet.png" id="7_1olh6"]
-[ext_resource type="Texture2D" uid="uid://cefbjb074e4xq" path="res://assets/MetroCity/Interior/Home/Flowers-Sheet.png" id="8_y25rf"]
-[ext_resource type="Texture2D" uid="uid://cg38l22sf3ii1" path="res://assets/MetroCity/Interior/Home/Lights-Sheet.png" id="9_qwig5"]
-[ext_resource type="Texture2D" uid="uid://b5313e86iv2n4" path="res://assets/MetroCity/Interior/Home/LivingRoom1-Sheet.png" id="10_4tl6b"]
-[ext_resource type="Texture2D" uid="uid://cq0dmfhfi67tb" path="res://assets/MetroCity/Interior/Home/LivingRoom-Sheet.png" id="11_ceys4"]
-[ext_resource type="Texture2D" uid="uid://d4by6ubtbewx3" path="res://assets/MetroCity/Interior/Home/Miscellaneous-Sheet.png" id="12_ibn3x"]
+[ext_resource type="Texture2D" uid="uid://fy2l36pif76j" path="res://assets/MetroCity/Interior/Home/Carpet-Sheet.png" id="1_t8pce"]
+[ext_resource type="Texture2D" uid="uid://dxi1cc3nrsn0" path="res://assets/MetroCity/Interior/Home/Chimney1-Sheet.png" id="2_g1ik0"]
+[ext_resource type="Texture2D" uid="uid://dfl8vf1jg7jlf" path="res://assets/MetroCity/Interior/Home/Paintings1-Sheet.png" id="3_tgl5k"]
+[ext_resource type="Texture2D" uid="uid://cve7w8cyk1t5a" path="res://assets/MetroCity/Interior/Home/Paintings-Sheet.png" id="4_sibfx"]
+[ext_resource type="Texture2D" uid="uid://c4650d5eald25" path="res://assets/MetroCity/Interior/Home/Chimney-Sheet.png" id="5_k5ar6"]
+[ext_resource type="Texture2D" uid="uid://wwp4dq8dxv8x" path="res://assets/MetroCity/Interior/Home/Cupboard-Sheet.png" id="6_p0v1l"]
+[ext_resource type="Texture2D" uid="uid://cefbjb074e4xq" path="res://assets/MetroCity/Interior/Home/Flowers-Sheet.png" id="7_s5xu3"]
+[ext_resource type="Texture2D" uid="uid://cg38l22sf3ii1" path="res://assets/MetroCity/Interior/Home/Lights-Sheet.png" id="8_c4h14"]
+[ext_resource type="Texture2D" uid="uid://b5313e86iv2n4" path="res://assets/MetroCity/Interior/Home/LivingRoom1-Sheet.png" id="9_a2ium"]
+[ext_resource type="Texture2D" uid="uid://cq0dmfhfi67tb" path="res://assets/MetroCity/Interior/Home/LivingRoom-Sheet.png" id="10_fdof7"]
+[ext_resource type="Texture2D" uid="uid://d4by6ubtbewx3" path="res://assets/MetroCity/Interior/Home/Miscellaneous-Sheet.png" id="11_75xrm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wmql"]
-texture = ExtResource("2_xwleh")
+texture = ExtResource("1_t8pce")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
@@ -30,7 +28,7 @@ texture_region_size = Vector2i(32, 32)
 8:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05d1r"]
-texture = ExtResource("3_n02mf")
+texture = ExtResource("2_g1ik0")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -42,7 +40,7 @@ texture_region_size = Vector2i(32, 32)
 7:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o3tdy"]
-texture = ExtResource("4_fgq0x")
+texture = ExtResource("3_tgl5k")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -51,7 +49,7 @@ texture_region_size = Vector2i(32, 32)
 4:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbkak"]
-texture = ExtResource("5_1l4im")
+texture = ExtResource("4_sibfx")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -65,7 +63,7 @@ texture_region_size = Vector2i(32, 32)
 9:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ou4x"]
-texture = ExtResource("6_t8f1g")
+texture = ExtResource("5_k5ar6")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
 1:0/0 = 0
@@ -77,7 +75,7 @@ texture_region_size = Vector2i(48, 48)
 7:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56pvt"]
-texture = ExtResource("7_1olh6")
+texture = ExtResource("6_p0v1l")
 1:1/size_in_atlas = Vector2i(2, 2)
 1:1/0 = 0
 4:1/size_in_atlas = Vector2i(4, 2)
@@ -98,7 +96,7 @@ texture = ExtResource("7_1olh6")
 33:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2scbc"]
-texture = ExtResource("8_y25rf")
+texture = ExtResource("7_s5xu3")
 1:0/size_in_atlas = Vector2i(2, 3)
 1:0/0 = 0
 5:1/size_in_atlas = Vector2i(2, 2)
@@ -113,7 +111,7 @@ texture = ExtResource("8_y25rf")
 21:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gck6e"]
-texture = ExtResource("9_qwig5")
+texture = ExtResource("8_c4h14")
 21:0/size_in_atlas = Vector2i(2, 2)
 21:0/0 = 0
 17:0/size_in_atlas = Vector2i(2, 2)
@@ -130,7 +128,7 @@ texture = ExtResource("9_qwig5")
 1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ej017"]
-texture = ExtResource("10_4tl6b")
+texture = ExtResource("9_a2ium")
 1:55/size_in_atlas = Vector2i(4, 2)
 1:55/0 = 0
 1:55/0/y_sort_origin = -8
@@ -289,7 +287,7 @@ texture = ExtResource("10_4tl6b")
 20:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, 23, -7, -7, 8, -7, 8, 23)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aq8pb"]
-texture = ExtResource("11_ceys4")
+texture = ExtResource("10_fdof7")
 margins = Vector2i(0, 4)
 1:0/size_in_atlas = Vector2i(4, 3)
 1:0/0 = 0
@@ -297,7 +295,7 @@ margins = Vector2i(0, 4)
 7:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_380y3"]
-texture = ExtResource("12_ibn3x")
+texture = ExtResource("11_75xrm")
 margins = Vector2i(0, 1)
 1:1/size_in_atlas = Vector2i(2, 2)
 1:1/0 = 0
@@ -312,7 +310,7 @@ margins = Vector2i(0, 1)
 13:1/0 = 0
 13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, 4, 7, 4, 8, 16, -7, 16)
 
-[sub_resource type="TileSet" id="TileSet_txrqq"]
+[resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0wmql")
 sources/1 = SubResource("TileSetAtlasSource_05d1r")
@@ -325,23 +323,3 @@ sources/8 = SubResource("TileSetAtlasSource_aq8pb")
 sources/9 = SubResource("TileSetAtlasSource_380y3")
 sources/10 = SubResource("TileSetAtlasSource_o3tdy")
 sources/11 = SubResource("TileSetAtlasSource_tbkak")
-
-[node name="Arcade" type="Node2D" unique_id=931136075]
-y_sort_enabled = true
-
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1421159182]
-tile_map_data = PackedByteArray("AAAAAAIAAQAGAAkAAAAAAAMAAQAGAAoAAAAAAAQAAQAGAAoAAAABAAIAAQAHAAkAAAABAAMAAQAHAAoAAAABAAQAAQAHAAoAAAACAAIAAQAGAAkAAAACAAMAAQAGAAoAAAACAAQAAQAGAAoAAAADAAIAAQAHAAkAAAADAAMAAQAHAAoAAAADAAQAAQAHAAoAAAAEAAIAAQAGAAkAAAAEAAMAAQAGAAoAAAAEAAQAAQAGAAoAAAAFAAIAAQAHAAkAAAAFAAMAAQAHAAoAAAAFAAQAAQAHAAoAAAAAAAUAAQAGAAkAAAAAAAYAAQAGAAoAAAAAAAcAAQAGAAkAAAAAAAgAAQAGAAoAAAAAAAkAAQAGAAkAAAAAAAoAAQAGAAoAAAABAAUAAQAHAAkAAAABAAYAAQAHAAoAAAABAAcAAQAHAAkAAAABAAgAAQAHAAoAAAABAAkAAQAHAAkAAAABAAoAAQAHAAoAAAACAAUAAQAGAAkAAAACAAYAAQAGAAkAAAACAAcAAQAGAAkAAAACAAgAAQAGAAoAAAACAAkAAQAGAAkAAAACAAoAAQAGAAoAAAADAAUAAQAHAAkAAAADAAYAAQAHAAkAAAADAAcAAQAHAAkAAAADAAgAAQAHAAoAAAADAAkAAQAHAAkAAAADAAoAAQAHAAoAAAAEAAUAAQAHAAkAAAAEAAYAAQAHAAkAAAAEAAcAAQAHAAoAAAAEAAgAAQAGAAoAAAAEAAkAAQAGAAkAAAAEAAoAAQAGAAoAAAAFAAUAAQAGAAkAAAAFAAYAAQAGAAoAAAAFAAcAAQAHAAkAAAAFAAgAAQAHAAoAAAAFAAkAAQAHAAkAAAAFAAoAAQAHAAoAAAAGAAIAAQAGAAkAAAAGAAMAAQAGAAoAAAAGAAQAAQAGAAoAAAAGAAUAAQAGAAkAAAAGAAYAAQAGAAoAAAAGAAcAAQAGAAkAAAAGAAgAAQAGAAoAAAAGAAkAAQAGAAkAAAAGAAoAAQAGAAoAAAAHAAIAAQAHAAkAAAAHAAMAAQAHAAoAAAAHAAQAAQAHAAoAAAAHAAUAAQAHAAkAAAAHAAYAAQAHAAoAAAAHAAcAAQAHAAkAAAAHAAgAAQAHAAoAAAAHAAkAAQAHAAkAAAAHAAoAAQAHAAoAAAAIAAIAAQAGAAkAAAAIAAMAAQAGAAoAAAAIAAQAAQAGAAoAAAAIAAUAAQAGAAkAAAAIAAYAAQAGAAoAAAAIAAcAAQAGAAkAAAAIAAgAAQAGAAoAAAAIAAkAAQAGAAkAAAAIAAoAAQAGAAoAAAAJAAIAAQAHAAkAAAAJAAMAAQAHAAoAAAAJAAQAAQAHAAoAAAAJAAUAAQAHAAkAAAAJAAYAAQAHAAoAAAAJAAcAAQAHAAkAAAAJAAgAAQAHAAoAAAAJAAkAAQAHAAkAAAAJAAoAAQAHAAoAAAAKAAIAAQAGAAkAAAAKAAMAAQAGAAoAAAAKAAQAAQAGAAoAAAAKAAUAAQAGAAkAAAAKAAYAAQAGAAoAAAAKAAcAAQAGAAkAAAAKAAgAAQAGAAoAAAAKAAkAAQAGAAkAAAAKAAoAAQAGAAoAAAALAAIAAQAHAAkAAAALAAMAAQAHAAoAAAALAAQAAQAHAAoAAAALAAUAAQAHAAkAAAALAAYAAQAHAAoAAAALAAcAAQAHAAkAAAALAAgAAQAHAAoAAAALAAkAAQAHAAkAAAALAAoAAQAHAAoAAAAAAP//AQAPAAQAAAAAAAAAAQAPAAcAAAALAP//AQAPAAQAAAALAAAAAQAPAAcAAAAAAAEAAQAPAAcAAAALAAEAAQAPAAcAAAA=")
-tile_set = ExtResource("1_me10n")
-
-[node name="Walls" type="TileMapLayer" parent="." unique_id=621906464]
-y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAAAAQAAQAOAAgAAAAAAAAAAQAOAAgAAAAAAAEAAQAOAAgAAAAAAAIAAQAOAAgAAAAAAAMAAQAOAAgAAAAAAAUAAQAOAAgAAAAAAAYAAQAOAAgAAAAAAAcAAQAOAAgAAAAAAAgAAQAOAAgAAAAAAAkAAQAOAAgAAAAAAAoAAQAQAA4AAAABAAoAAQAPAA0AAAACAAoAAQAPAA0AAAADAAoAAQAPAA0AAAAEAAoAAQAPAA0AAAAFAAoAAQAPAA0AAAAGAAoAAQAPAA0AAAAHAAoAAQAPAA0AAAAIAAoAAQAPAA0AAAAJAAoAAQAPAA0AAAAKAAoAAQAPAA0AAAALAAAAAQASAAgAAAALAAEAAQASAAgAAAALAAIAAQASAAgAAAALAAMAAQASAAgAAAALAAQAAQASAAgAAAALAAUAAQASAAgAAAALAAYAAQASAAgAAAALAAcAAQASAAgAAAALAAgAAQASAAgAAAALAAkAAQASAAgAAAALAAoAAQARAAwAAAABAAAAAQAPAAYAAAACAAAAAQAPAAYAAAADAAAAAQAPAAcAAAAEAAAAAQAPAAUAAAAFAAAAAQAPAAUAAAAGAAAAAQAPAAUAAAAHAAAAAQAPAAYAAAAIAAAAAQAPAAUAAAAJAAAAAQAPAAcAAAAKAAAAAQAPAAUAAAABAP//AQAPAAQAAAACAP//AQAPAAQAAAADAP//AQAPAAQAAAAEAP//AQAPAAQAAAAFAP//AQAPAAQAAAAGAP//AQAPAAQAAAAHAP//AQAPAAQAAAAIAP//AQAPAAQAAAAJAP//AQAPAAQAAAAKAP//AQAPAAQAAAABAAEAAQAPAAYAAAACAAEAAQAPAAYAAAADAAEAAQAPAAcAAAAEAAEAAQAPAAUAAAAFAAEAAQAPAAUAAAAGAAEAAQAPAAUAAAAHAAEAAQAPAAYAAAAIAAEAAQAPAAUAAAAJAAEAAQAPAAcAAAAKAAEAAQAPAAUAAAALAP//AQASAAQAAAAAAP//AQAOAAQAAAA=")
-tile_set = ExtResource("1_me10n")
-
-[node name="Decorations" type="TileMapLayer" parent="." unique_id=39275860]
-y_sort_enabled = true
-tile_map_data = PackedByteArray("AAACAAIABwABADcAAAAKAAcABwAUADYAAAAFAAIACQABAAEAAAAJAAIABgAJAAAAAAACAAAACgACAAAAAAAKAAAACgAEAAAAAAAFAAcAAAAEAAAAAAA=")
-tile_set = SubResource("TileSet_txrqq")
-
-[node name="PlayerArcade" parent="." unique_id=1147089591 instance=ExtResource("1_pig0t")]
-position = Vector2(64, 64)
