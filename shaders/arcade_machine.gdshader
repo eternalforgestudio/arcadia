@@ -14,7 +14,7 @@ vec4 replace_color(vec4 color) {
 	vec4 original_colors[3] = vec4[3](original_0, original_1, original_2);
 	vec4 replace_colors[3] = vec4[3](replace_0, replace_1, replace_2);
 	
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 3; i++) {
 		if (distance(color, original_colors[i]) <= precision) {
 			color = replace_colors[i];
 		}

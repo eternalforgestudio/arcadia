@@ -337,6 +337,18 @@ shader_parameter/replace_0 = Color(0.12941177, 0.12941177, 1, 1)
 shader_parameter/replace_1 = Color(0.12941177, 0.4, 1, 1)
 shader_parameter/replace_2 = Color(0, 0, 0.3764706, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1l4im"]
+shader = ExtResource("15_fgq0x")
+shader_parameter/original_0 = Color(0.78431374, 0.21960784, 0.21960784, 1)
+shader_parameter/original_1 = Color(0.9019608, 0.41568628, 0.41568628, 1)
+shader_parameter/original_2 = Color(0.6, 0.105882354, 0.12156863, 1)
+shader_parameter/replace_0 = Color(0, 0.81960785, 0.49803922, 1)
+shader_parameter/replace_1 = Color(0.5254902, 0.972549, 0.38431373, 1)
+shader_parameter/replace_2 = Color(0, 0.23529412, 0.3764706, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t8f1g"]
+load_path = "res://.godot/imported/arcade-machine.png-0e8b5c8d7b8b5efbbce6353463dcf8c3.ctex"
+
 [node name="Arcade" type="Node2D" unique_id=931136075]
 y_sort_enabled = true
 
@@ -373,4 +385,19 @@ visible = false
 [node name="CollisionShape2D" parent="ArcadeMachine2/InteractableComponent" parent_id_path=PackedInt32Array(340312715, 1051761539) index="0" unique_id=404289260]
 visible = false
 
+[node name="ArcadeMachine3" parent="." unique_id=1047218894 instance=ExtResource("14_n02mf")]
+position = Vector2(28, 136)
+
+[node name="Sprite2D" parent="ArcadeMachine3" index="0" unique_id=1679370901]
+material = SubResource("ShaderMaterial_1l4im")
+texture = SubResource("CompressedTexture2D_t8f1g")
+flip_h = true
+
+[node name="CollisionShape2D" parent="ArcadeMachine3" index="1" unique_id=1945436090]
+visible = false
+
+[node name="CollisionShape2D" parent="ArcadeMachine3/InteractableComponent" parent_id_path=PackedInt32Array(1047218894, 1051761539) index="0" unique_id=404289260]
+visible = false
+
 [editable path="ArcadeMachine2"]
+[editable path="ArcadeMachine3"]
