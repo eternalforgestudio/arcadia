@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cpuh8yjiftixb"]
+
+[ext_resource type="Script" uid="uid://b4swa3kpfelmj" path="res://scripts/platformer scripts/Finish_Screen.gd" id="1_bxdan"]
+[ext_resource type="Texture2D" uid="uid://ehbj7vcisj4e" path="res://assets/Platformer/final screan.png" id="2_gnwf1"]
+[ext_resource type="Texture2D" uid="uid://wke5mo5lg7dj" path="res://assets/Platformer/play again.png" id="3_mdy3r"]
+[ext_resource type="Texture2D" uid="uid://dhxo3vv0lk37g" path="res://assets/Platformer/home.png" id="4_bxw17"]
+
+[node name="Finish Screan" type="Node2D" unique_id=1345406409]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=716740394]
+script = ExtResource("1_bxdan")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1884646975]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gnwf1")
+stretch_mode = 6
+
+[node name="playagain" type="Button" parent="CanvasLayer" unique_id=1831396103]
+offset_left = 359.0
+offset_top = 298.0
+offset_right = 767.0
+offset_bottom = 456.0
+icon = ExtResource("3_mdy3r")
+
+[node name="home" type="Button" parent="CanvasLayer" unique_id=1606931596]
+offset_left = 358.0
+offset_top = 462.0
+offset_right = 766.0
+offset_bottom = 620.0
+icon = ExtResource("4_bxw17")
+
+[connection signal="pressed" from="CanvasLayer/playagain" to="CanvasLayer" method="_on_playagain_pressed"]
+[connection signal="pressed" from="CanvasLayer/home" to="CanvasLayer" method="_on_home_pressed"]

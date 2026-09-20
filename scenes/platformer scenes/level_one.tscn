@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bqlljsh1u71ig"]
+
+[ext_resource type="PackedScene" uid="uid://bp6pimqudwkuh" path="res://scenes/platformer scenes/player.tscn" id="1_4lqib"]
+[ext_resource type="Script" uid="uid://baqh5q36rn2xc" path="res://scripts/platformer scripts/levels.gd" id="1_oetc8"]
+[ext_resource type="Texture2D" uid="uid://3i3o6xtjd5oc" path="res://assets/Platformer/maptiles.png" id="2_le7ms"]
+[ext_resource type="PackedScene" uid="uid://cxykyo7vkfjqt" path="res://scenes/platformer scenes/flag.tscn" id="3_oetc8"]
+[ext_resource type="Script" uid="uid://cdf0n3ltnts6e" path="res://scripts/platformer scripts/flag.gd" id="4_rrm2s"]
+[ext_resource type="Script" uid="uid://ct3co857u5rtj" path="res://scripts/platformer scripts/area_2d.gd" id="5_le7ms"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jwuyf"]
+texture = ExtResource("2_le7ms")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.2590103, 8, -1.2590103, 8, 1.2590122, -8, 1.4388714)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.4388695, -8, 1.4388695, -8, 1.2590103, 8, -1.4388695, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.4388714, -8, -1.4388695, 1.4388695, -1.0791512, 1.2590103, 8, -1.4388695, 8, -1.4388695, 1.4388714)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.4388714, -8, -1.4388695, -1.2590103, -1.6187286, -1.4388695, -8, 1.4388695, -8, 1.2590103, 1.2590122)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -1.2590103, 8, 1.4388714, -1.6187286, 1.4388714, -1.4388695, -8, 1.4388695, -8, 1.2590103, -1.2590103)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -1.2590103, 8, 1.4388714, 1.0791531, 1.4388714, 1.4388695, 8, -1.6187286, 8, -1.2590103, -0.8992939)
+
+[sub_resource type="TileSet" id="TileSet_m8na2"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jwuyf")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e6yq6"]
+texture = ExtResource("2_le7ms")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g7qya"]
+sources/0 = SubResource("TileSetAtlasSource_e6yq6")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g7qya"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_60h8p"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oetc8"]
+size = Vector2(1180, 20)
+
+[node name="level one" type="Node2D" unique_id=44097825]
+script = ExtResource("1_oetc8")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=35109353]
+position = Vector2(578, 323)
+enabled = false
+position_smoothing_enabled = true
+
+[node name="Player" parent="." unique_id=232997680 instance=ExtResource("1_4lqib")]
+position = Vector2(116, 322)
+scale = Vector2(2, 2)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1495265170]
+position = Vector2(578, 323)
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_m8na2")
+format = 2
+layer_0/tile_data = PackedInt32Array(131054, 0, 0, 131055, 0, 0, 131056, 0, 0, 131057, 0, 0, 131058, 0, 0, 131059, 0, 0, 131060, 0, 0, 131061, 0, 0, 131062, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0)
+
+[node name="TileMap2" type="TileMap" parent="." unique_id=1680705315]
+position = Vector2(578, 323)
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_g7qya")
+format = 2
+layer_0/tile_data = PackedInt32Array(65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0)
+
+[node name="flag" parent="." unique_id=360533598 instance=ExtResource("3_oetc8")]
+position = Vector2(1102, 336)
+scale = Vector2(2, 2)
+script = ExtResource("4_rrm2s")
+
+[node name="world boundry" type="StaticBody2D" parent="." unique_id=953087122]
+
+[node name="CollisionShape2Dleft" type="CollisionShape2D" parent="world boundry" unique_id=54426468]
+shape = SubResource("WorldBoundaryShape2D_g7qya")
+
+[node name="CollisionShape2Dright" type="CollisionShape2D" parent="world boundry" unique_id=164207704]
+position = Vector2(1152, -2)
+shape = SubResource("WorldBoundaryShape2D_60h8p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1757883042]
+position = Vector2(577, 742)
+script = ExtResource("5_le7ms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1411574659]
+position = Vector2(7, 0)
+shape = SubResource("RectangleShape2D_oetc8")
+
+[connection signal="body_entered" from="flag" to="flag" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

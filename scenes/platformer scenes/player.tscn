@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bp6pimqudwkuh"]
+
+[ext_resource type="Script" uid="uid://dsjhq1fcfxgi4" path="res://scripts/platformer scripts/player.gd" id="1_j6yk4"]
+[ext_resource type="Texture2D" uid="uid://6diwlgli8f0f" path="res://assets/Platformer/player.png" id="1_xiw0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8na2"]
+size = Vector2(16, 16)
+
+[node name="Player" type="CharacterBody2D" unique_id=232997680]
+script = ExtResource("1_j6yk4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1493319245]
+texture = ExtResource("1_xiw0o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=968496749]
+shape = SubResource("RectangleShape2D_m8na2")
