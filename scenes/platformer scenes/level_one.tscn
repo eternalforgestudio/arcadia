@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqlljsh1u71ig"]
 
 [ext_resource type="PackedScene" uid="uid://bp6pimqudwkuh" path="res://scenes/platformer scenes/player.tscn" id="1_4lqib"]
+[ext_resource type="Script" uid="uid://baqh5q36rn2xc" path="res://scripts/platformer scripts/levels.gd" id="1_oetc8"]
 [ext_resource type="Texture2D" uid="uid://3i3o6xtjd5oc" path="res://assets/Platformer/maptiles.png" id="2_le7ms"]
 [ext_resource type="PackedScene" uid="uid://cxykyo7vkfjqt" path="res://scenes/platformer scenes/flag.tscn" id="3_oetc8"]
 [ext_resource type="Script" uid="uid://cdf0n3ltnts6e" path="res://scripts/platformer scripts/flag.gd" id="4_rrm2s"]
@@ -47,6 +48,7 @@ normal = Vector2(-1, 0)
 size = Vector2(1180, 20)
 
 [node name="level one" type="Node2D" unique_id=44097825]
+script = ExtResource("1_oetc8")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=35109353]
 position = Vector2(578, 323)
