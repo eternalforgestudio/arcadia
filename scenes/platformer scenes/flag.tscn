@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxykyo7vkfjqt"]
+
+[ext_resource type="Texture2D" uid="uid://b04ecf06o08xg" path="res://assets/Platformer/flag.png" id="1_rwdyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8na2"]
+size = Vector2(31, 33)
+
+[node name="flag" type="Area2D" unique_id=360533598]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=968982723]
+texture = ExtResource("1_rwdyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1297727312]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_m8na2")

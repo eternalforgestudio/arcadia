@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://da6fx8s6rp3nd"]
+
+[ext_resource type="PackedScene" uid="uid://bp6pimqudwkuh" path="res://scenes/platformer scenes/player.tscn" id="1_oy82q"]
+[ext_resource type="Texture2D" uid="uid://3i3o6xtjd5oc" path="res://assets/Platformer/maptiles.png" id="2_dttdh"]
+[ext_resource type="PackedScene" uid="uid://cxykyo7vkfjqt" path="res://scenes/platformer scenes/flag.tscn" id="3_eieue"]
+[ext_resource type="Script" uid="uid://cxsox2pnthlbu" path="res://scripts/platformer scripts/flag5.gd" id="4_pm362"]
+[ext_resource type="Script" uid="uid://ct3co857u5rtj" path="res://scripts/platformer scripts/area_2d.gd" id="5_nllqk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jk3ra"]
+texture = ExtResource("2_dttdh")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.2590103, 8, -1.2590103, 8, 1.2590122, -8, 1.4388714)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.4388695, -8, 1.4388695, -8, 1.2590103, 8, -1.4388695, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.4388714, -8, -1.4388695, 1.4388695, -1.0791512, 1.2590103, 8, -1.4388695, 8, -1.4388695, 1.4388714)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.4388714, -8, -1.4388695, -1.2590103, -1.6187286, -1.4388695, -8, 1.4388695, -8, 1.2590103, 1.2590122)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -1.2590103, 8, 1.4388714, -1.6187286, 1.4388714, -1.4388695, -8, 1.4388695, -8, 1.2590103, -1.2590103)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -1.2590103, 8, 1.4388714, 1.0791531, 1.4388714, 1.4388695, 8, -1.6187286, 8, -1.2590103, -0.8992939)
+
+[sub_resource type="TileSet" id="TileSet_a4tm3"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jk3ra")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p1pdn"]
+texture = ExtResource("2_dttdh")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dk2lx"]
+sources/0 = SubResource("TileSetAtlasSource_p1pdn")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nllqk"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6d13y"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8na2"]
+size = Vector2(1180, 20)
+
+[node name="Level two" type="Node2D" unique_id=689235982]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=367193350]
+position = Vector2(575, 325)
+
+[node name="Player" parent="." unique_id=232997680 instance=ExtResource("1_oy82q")]
+position = Vector2(51, 61)
+scale = Vector2(2, 2)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=549720425]
+position = Vector2(578, 323)
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_a4tm3")
+format = 2
+
+[node name="TileMap2" type="TileMap" parent="." unique_id=1600017253]
+position = Vector2(578, 323)
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_dk2lx")
+format = 2
+
+[node name="flag5" parent="." unique_id=360533598 instance=ExtResource("3_eieue")]
+position = Vector2(1102, 336)
+scale = Vector2(2, 2)
+script = ExtResource("4_pm362")
+
+[node name="world boundry" type="StaticBody2D" parent="." unique_id=220085392]
+
+[node name="CollisionShape2Dleft" type="CollisionShape2D" parent="world boundry" unique_id=262753593]
+shape = SubResource("WorldBoundaryShape2D_nllqk")
+
+[node name="CollisionShape2Dright" type="CollisionShape2D" parent="world boundry" unique_id=236703846]
+position = Vector2(1152, -2)
+shape = SubResource("WorldBoundaryShape2D_6d13y")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1868537732]
+position = Vector2(577, 742)
+script = ExtResource("5_nllqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1204950018]
+position = Vector2(7, 0)
+shape = SubResource("RectangleShape2D_m8na2")
+
+[connection signal="body_entered" from="flag5" to="flag5" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
