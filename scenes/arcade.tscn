@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cq0dmfhfi67tb" path="res://assets/MetroCity/Interior/Home/LivingRoom-Sheet.png" id="11_ceys4"]
 [ext_resource type="Texture2D" uid="uid://d4by6ubtbewx3" path="res://assets/MetroCity/Interior/Home/Miscellaneous-Sheet.png" id="12_ibn3x"]
 [ext_resource type="PackedScene" uid="uid://lh7hqxrph2ou" path="res://scenes/arcade_machine.tscn" id="14_n02mf"]
+[ext_resource type="Shader" uid="uid://bkh6oixjs5hgl" path="res://shaders/arcade_machine.gdshader" id="15_fgq0x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wmql"]
 texture = ExtResource("2_xwleh")
@@ -327,6 +328,15 @@ sources/9 = SubResource("TileSetAtlasSource_380y3")
 sources/10 = SubResource("TileSetAtlasSource_o3tdy")
 sources/11 = SubResource("TileSetAtlasSource_tbkak")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fgq0x"]
+shader = ExtResource("15_fgq0x")
+shader_parameter/original_0 = Color(0.78431374, 0.21960784, 0.21960784, 1)
+shader_parameter/original_1 = Color(0.9019608, 0.41568628, 0.41568628, 1)
+shader_parameter/original_2 = Color(0.6, 0.105882354, 0.12156863, 1)
+shader_parameter/replace_0 = Color(0.12941177, 0.12941177, 1, 1)
+shader_parameter/replace_1 = Color(0.12941177, 0.4, 1, 1)
+shader_parameter/replace_2 = Color(0, 0, 0.3764706, 1)
+
 [node name="Arcade" type="Node2D" unique_id=931136075]
 y_sort_enabled = true
 
@@ -345,7 +355,22 @@ tile_map_data = PackedByteArray("AAACAAIABwABADcAAAAKAAcABwAUADYAAAAFAAIACQABAAE
 tile_set = SubResource("TileSet_txrqq")
 
 [node name="PlayerArcade" parent="." unique_id=1147089591 instance=ExtResource("1_pig0t")]
-position = Vector2(64, 64)
+position = Vector2(89, 120)
 
-[node name="ArcadeMachine" parent="." unique_id=340312715 instance=ExtResource("14_n02mf")]
-position = Vector2(168, 75)
+[node name="ArcadeMachine" parent="." unique_id=1999305970 instance=ExtResource("14_n02mf")]
+position = Vector2(165, 75)
+
+[node name="ArcadeMachine2" parent="." unique_id=340312715 instance=ExtResource("14_n02mf")]
+position = Vector2(28, 75)
+
+[node name="Sprite2D" parent="ArcadeMachine2" index="0" unique_id=1679370901]
+material = SubResource("ShaderMaterial_fgq0x")
+flip_h = true
+
+[node name="CollisionShape2D" parent="ArcadeMachine2" index="1" unique_id=1945436090]
+visible = false
+
+[node name="CollisionShape2D" parent="ArcadeMachine2/InteractableComponent" parent_id_path=PackedInt32Array(340312715, 1051761539) index="0" unique_id=404289260]
+visible = false
+
+[editable path="ArcadeMachine2"]
