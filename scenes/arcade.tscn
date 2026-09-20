@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b5313e86iv2n4" path="res://assets/MetroCity/Interior/Home/LivingRoom1-Sheet.png" id="10_4tl6b"]
 [ext_resource type="Texture2D" uid="uid://cq0dmfhfi67tb" path="res://assets/MetroCity/Interior/Home/LivingRoom-Sheet.png" id="11_ceys4"]
 [ext_resource type="Texture2D" uid="uid://d4by6ubtbewx3" path="res://assets/MetroCity/Interior/Home/Miscellaneous-Sheet.png" id="12_ibn3x"]
+[ext_resource type="PackedScene" uid="uid://lh7hqxrph2ou" path="res://scenes/arcade_machine.tscn" id="14_n02mf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wmql"]
 texture = ExtResource("2_xwleh")
@@ -345,3 +346,6 @@ tile_set = SubResource("TileSet_txrqq")
 
 [node name="PlayerArcade" parent="." unique_id=1147089591 instance=ExtResource("1_pig0t")]
 position = Vector2(64, 64)
+
+[node name="ArcadeMachine" parent="." unique_id=340312715 instance=ExtResource("14_n02mf")]
+position = Vector2(168, 75)

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://csc32en83vyad"]
+
+[ext_resource type="Texture2D" uid="uid://ttoxrphxpy1o" path="res://assets/sprites/dark-circle.png" id="1_fp6oa"]
+[ext_resource type="FontFile" uid="uid://x5r23r2f8ygx" path="res://assets/fonts/PixelOperator8.ttf" id="2_a70io"]
+
+[node name="InteractableLabelComponent" type="Control" unique_id=1225591395]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=129394520]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_fp6oa")
+
+[node name="Label" type="Label" parent="." unique_id=1435024662]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 53.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("2_a70io")
+text = "E"
