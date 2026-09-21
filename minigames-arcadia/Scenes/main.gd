@@ -18,3 +18,7 @@ func _on_score_right_body_entered(body: Node2D) -> void:
 	score[0] += 1
 	$Hud/Player.text = str(score[0])
 	$Timer.start()
+
+
+func _on_button_pressed() -> void:
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/arcade.tscn")

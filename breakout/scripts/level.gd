@@ -1,7 +1,7 @@
 extends Node2D
 
 #block scene used to instantiate
-@onready var brickObject = preload("res://scenes/brick.tscn")
+@onready var brickObject = preload("res://breakout/scenes/brick.tscn")
 
 var columns = 32 # number of columns of blocks
 var rows = 7 # number of rows of blocks

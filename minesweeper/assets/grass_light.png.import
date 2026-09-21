@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lv1aqs1qdqd7"
-path="res://.godot/imported/grass_light.png-d5986be00759e1265971b725fe4d549f.ctex"
+path="res://.godot/imported/grass_light.png-ab9bb7e542c33c8be90ba090260c0fff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grass_light.png"
-dest_files=["res://.godot/imported/grass_light.png-d5986be00759e1265971b725fe4d549f.ctex"]
+source_file="res://minesweeper/assets/grass_light.png"
+dest_files=["res://.godot/imported/grass_light.png-ab9bb7e542c33c8be90ba090260c0fff.ctex"]
 
 [params]
 

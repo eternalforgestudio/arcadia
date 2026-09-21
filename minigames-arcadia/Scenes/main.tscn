@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://5dcini16xnwr"]
 
-[ext_resource type="Texture2D" uid="uid://cnqrr5tpcwyqq" path="res://assets/Bg.png" id="1_bo1nx"]
-[ext_resource type="FontFile" uid="uid://504wnanl6iw0" path="res://assets/pixel_font.ttf" id="2_8gbba"]
-[ext_resource type="Script" uid="uid://dgq3cbf5ssjaa" path="res://Scenes/main.gd" id="2_jjvhh"]
-[ext_resource type="Script" uid="uid://bc6lc703qgf3f" path="res://Scenes/player.gd" id="3_jjvhh"]
-[ext_resource type="Script" uid="uid://dl3ta8xscoi66" path="res://Scenes/ai.gd" id="4_21xkr"]
-[ext_resource type="Script" uid="uid://bpy56gpmy7dds" path="res://Scenes/ball.gd" id="4_kry3j"]
+[ext_resource type="Texture2D" uid="uid://cnqrr5tpcwyqq" path="res://minigames-arcadia/assets/Bg.png" id="1_bo1nx"]
+[ext_resource type="FontFile" uid="uid://504wnanl6iw0" path="res://minigames-arcadia/assets/pixel_font.ttf" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://dgq3cbf5ssjaa" path="res://minigames-arcadia/Scenes/main.gd" id="2_jjvhh"]
+[ext_resource type="Script" uid="uid://bc6lc703qgf3f" path="res://minigames-arcadia/Scenes/player.gd" id="3_jjvhh"]
+[ext_resource type="Script" uid="uid://dl3ta8xscoi66" path="res://minigames-arcadia/Scenes/ai.gd" id="4_21xkr"]
+[ext_resource type="Script" uid="uid://bpy56gpmy7dds" path="res://minigames-arcadia/Scenes/ball.gd" id="4_kry3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
 size = Vector2(20, 120)
@@ -137,6 +137,20 @@ vertical_alignment = 1
 one_shot = true
 autostart = true
 
+[node name="Button" type="Button" parent="." unique_id=143610921]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.5
+offset_top = -31.0
+offset_right = 26.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Menu"
+
 [connection signal="body_entered" from="ScoreLeft" to="." method="_on_score_left_body_entered"]
 [connection signal="body_entered" from="ScoreRight" to="." method="_on_score_right_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

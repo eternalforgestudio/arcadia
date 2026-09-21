@@ -18,6 +18,8 @@
 [ext_resource type="Shader" uid="uid://bkh6oixjs5hgl" path="res://shaders/arcade_machine.gdshader" id="15_fgq0x"]
 [ext_resource type="PackedScene" uid="uid://bqlljsh1u71ig" path="res://scenes/platformer scenes/level_one.tscn" id="16_1olh6"]
 [ext_resource type="PackedScene" uid="uid://d2p783gd30yb0" path="res://scenes/basketball scenes/basketball_game.tscn" id="17_t8f1g"]
+[ext_resource type="PackedScene" uid="uid://5dcini16xnwr" path="res://minigames-arcadia/Scenes/main.tscn" id="17_y25rf"]
+[ext_resource type="AudioStream" uid="uid://c2hxjqwpxgkux" path="res://assets/music/looperman-l-4338176-0415079-ourple-arcade.wav" id="20_qwig5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wmql"]
 texture = ExtResource("2_xwleh")
@@ -387,6 +389,7 @@ minigame_scene = ExtResource("16_1olh6")
 
 [node name="ArcadeMachine2" parent="." unique_id=340312715 instance=ExtResource("14_n02mf")]
 position = Vector2(28, 75)
+minigame_scene = ExtResource("17_y25rf")
 
 [node name="Sprite2D" parent="ArcadeMachine2" index="0" unique_id=1679370901]
 material = SubResource("ShaderMaterial_fgq0x")
@@ -400,6 +403,10 @@ minigame_scene = ExtResource("17_t8f1g")
 material = SubResource("ShaderMaterial_1l4im")
 texture = SubResource("CompressedTexture2D_t8f1g")
 flip_h = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1026478812]
+stream = ExtResource("20_qwig5")
+autoplay = true
 
 [editable path="ArcadeMachine2"]
 [editable path="ArcadeMachine3"]

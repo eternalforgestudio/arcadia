@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwyc0jbak3c6s"]
+[gd_scene format=3 uid="uid://bwyc0jbak3c6s"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_1exlk"]
-[ext_resource type="PackedScene" uid="uid://b1jicjrct1yrv" path="res://scenes/paddle.tscn" id="1_ll22d"]
-[ext_resource type="PackedScene" uid="uid://be35w3b5do0sx" path="res://scenes/ball.tscn" id="2_nj764"]
-[ext_resource type="Texture2D" uid="uid://bejk6kved71lg" path="res://assets/0f0f0378-e0cc-4f27-aa82-be980337a7e4.png" id="4_ocycb"]
-[ext_resource type="Texture2D" uid="uid://tckvtyadtmp6" path="res://assets/ball.png" id="5_1s6an"]
+[ext_resource type="Script" uid="uid://sxsxcagp4m6" path="res://breakout/scripts/level.gd" id="1_1exlk"]
+[ext_resource type="PackedScene" uid="uid://b1jicjrct1yrv" path="res://breakout/scenes/paddle.tscn" id="1_ll22d"]
+[ext_resource type="PackedScene" uid="uid://be35w3b5do0sx" path="res://breakout/scenes/ball.tscn" id="2_nj764"]
+[ext_resource type="Texture2D" uid="uid://bejk6kved71lg" path="res://breakout/assets/0f0f0378-e0cc-4f27-aa82-be980337a7e4.png" id="4_ocycb"]
+[ext_resource type="Texture2D" uid="uid://tckvtyadtmp6" path="res://breakout/assets/ball.png" id="5_1s6an"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg0xg"]
 size = Vector2(1164, 20)
