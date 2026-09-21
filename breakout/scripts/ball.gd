@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 func gameOver():
 	BreakoutGameManager.score = 0 #reset score if you want
 	BreakoutGameManager.level = 1 #reset level if you want
-	get_tree().reload_current_scene()	#reload scene
+	get_tree().call_deferred("reload_current_scene")	#reload scene
 
 #restart level when ball off screen
 func _on_deathzone_body_entered(body: Node2D) -> void:
