@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b1j1cumnslvhr"]
+
+[ext_resource type="Texture2D" uid="uid://e1drkbdgnvnf" path="res://assets/table.png" id="1_n6c8x"]
+
+[node name="8Pool" type="Sprite2D" unique_id=817004151]
+texture_filter = 1
+texture = ExtResource("1_n6c8x")
+centered = false
