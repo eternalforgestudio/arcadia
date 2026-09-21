@@ -20,21 +20,21 @@ bg_color = Color(1, 1, 1, 0.458824)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85ov3"]
 bg_color = Color(0.909804, 0, 0.254902, 1)
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" unique_id=945652247]
 script = ExtResource("1_0e5bp")
 ball_scene = ExtResource("2_fqn7w")
 
-[node name="Table" parent="." instance=ExtResource("1_kyu7g")]
+[node name="Table" parent="." unique_id=493385536 instance=ExtResource("1_kyu7g")]
 
-[node name="PottedPanel" type="Panel" parent="."]
+[node name="PottedPanel" type="Panel" parent="." unique_id=1814179114]
 offset_top = 678.0
 offset_right = 1200.0
 offset_bottom = 778.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_p7mb7")
 
-[node name="Cue" parent="." instance=ExtResource("4_deyx0")]
+[node name="Cue" parent="." unique_id=1343951636 instance=ExtResource("4_deyx0")]
 
-[node name="PowerBar" type="ProgressBar" parent="."]
+[node name="PowerBar" type="ProgressBar" parent="." unique_id=2105612765]
 z_index = 1
 offset_left = 191.0
 offset_top = 147.0
@@ -45,7 +45,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_85ov3")
 show_percentage = false
 script = ExtResource("5_2rjyh")
 
-[node name="LivesLabel" type="Label" parent="."]
+[node name="LivesLabel" type="Label" parent="." unique_id=1043158849]
 offset_left = 950.0
 offset_top = 675.0
 offset_right = 1080.0
@@ -55,7 +55,7 @@ text = "LIVES: 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ShotsLabel" type="Label" parent="."]
+[node name="ShotsLabel" type="Label" parent="." unique_id=2065106789]
 offset_left = 940.0
 offset_top = 720.0
 offset_right = 1091.0
@@ -65,7 +65,7 @@ text = "SHOTS: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Hud" parent="." instance=ExtResource("6_yg7l3")]
+[node name="Hud" parent="." unique_id=139445721 instance=ExtResource("6_yg7l3")]
 process_mode = 2
 
 [connection signal="shoot" from="Cue" to="." method="_on_cue_shoot"]

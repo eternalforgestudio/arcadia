@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://x5r23r2f8ygx" path="res://assets/fonts/PixelOperator8.ttf" id="2_a70io"]
 
 [node name="InteractableLabelComponent" type="Control" unique_id=1225591395]
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

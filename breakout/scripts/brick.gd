@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 #brick is hit
 func hit():
 	#add to score
-	GameManager.addPoints(1)
+	BreakoutGameManager.addPoints(1)
 	
 	#particles for block destruction, disable collider and sprite
 	$CPUParticles2D.emitting = true # turn off particles
@@ -26,7 +26,7 @@ func hit():
 		#if last brick, reload scene to next level
 		get_parent().get_node("Ball").is_active = false
 		await get_tree().create_timer(1).timeout #pause
-		GameManager.level += 1 #iterate level
+		BreakoutGameManager.level += 1 #iterate level
 		get_tree().reload_current_scene() #reload scene
 	else:
 		#wait, then remove block (so particles can play)

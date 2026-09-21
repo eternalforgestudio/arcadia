@@ -6,7 +6,7 @@ var is_active = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	speed = speed + (20 * GameManager.level)
+	speed = speed + (20 * BreakoutGameManager.level)
 	velocity = Vector2(speed * -1,speed) # set initial direction for the ball when scene loads
 
 
@@ -35,8 +35,8 @@ func _process(delta: float) -> void:
 
 
 func gameOver():
-	GameManager.score = 0 #reset score if you want
-	GameManager.level = 1 #reset level if you want
+	BreakoutGameManager.score = 0 #reset score if you want
+	BreakoutGameManager.level = 1 #reset level if you want
 	get_tree().reload_current_scene()	#reload scene
 
 #restart level when ball off screen
