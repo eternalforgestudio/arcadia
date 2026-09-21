@@ -41,6 +41,11 @@ folder_colors={
 "res://tilesets/": "yellow"
 }
 
+[global_group]
+
+Paddle=""
+Brick=""
+
 [input]
 
 up={
@@ -82,8 +87,11 @@ exit={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/default_gravity_vector=Vector2(0, 0)
+2d/default_linear_damp=1.5
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.0534209, 0.0534209, 0.0534209, 1)
