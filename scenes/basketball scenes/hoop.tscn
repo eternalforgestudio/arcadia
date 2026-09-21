@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b0ilnxdjg2boh"]
+
+[ext_resource type="Texture2D" uid="uid://svv7hxiktfg6" path="res://assets/BasketBall/basket.png" id="1_0133w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_56fna"]
+radius = 5.0
+height = 150.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anvo0"]
+radius = 5.0
+height = 150.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8na2"]
+size = Vector2(60, 15)
+
+[node name="Hoop" type="AnimatableBody2D" unique_id=1305296900]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=19666828]
+texture = ExtResource("1_0133w")
+
+[node name="left rim" type="CollisionShape2D" parent="." unique_id=653865232]
+position = Vector2(-51.000004, -15.000003)
+rotation = -0.17453292
+shape = SubResource("CapsuleShape2D_56fna")
+
+[node name="right rim" type="CollisionShape2D" parent="." unique_id=1293614325]
+position = Vector2(52.000004, -15.000004)
+rotation = 0.13962634
+shape = SubResource("CapsuleShape2D_anvo0")
+
+[node name="Scoring area" type="Area2D" parent="." unique_id=986994542]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scoring area" unique_id=990190629]
+position = Vector2(0, -33)
+shape = SubResource("RectangleShape2D_m8na2")
