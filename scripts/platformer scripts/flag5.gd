@@ -1,6 +1,6 @@
 extends Area2D
 
-@export_file("*.tscn") var last_scene_path: String = "res://scenes/platformer scenes/finish_screan.tscn"
+@export_file("*.tscn") var last_scene_path: String = "res://scenes/platformer scenes/finish_screen.tscn"
 
 
 

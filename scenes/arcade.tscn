@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://d4by6ubtbewx3" path="res://assets/MetroCity/Interior/Home/Miscellaneous-Sheet.png" id="12_ibn3x"]
 [ext_resource type="PackedScene" uid="uid://lh7hqxrph2ou" path="res://scenes/arcade_machine.tscn" id="14_n02mf"]
 [ext_resource type="Shader" uid="uid://bkh6oixjs5hgl" path="res://shaders/arcade_machine.gdshader" id="15_fgq0x"]
+[ext_resource type="PackedScene" uid="uid://bqlljsh1u71ig" path="res://scenes/platformer scenes/level_one.tscn" id="16_1olh6"]
+[ext_resource type="PackedScene" uid="uid://d2p783gd30yb0" path="res://scenes/basketball scenes/basketball_game.tscn" id="17_t8f1g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wmql"]
 texture = ExtResource("2_xwleh")
@@ -381,6 +383,7 @@ position = Vector2(89, 120)
 
 [node name="ArcadeMachine" parent="." unique_id=1999305970 instance=ExtResource("14_n02mf")]
 position = Vector2(165, 75)
+minigame_scene = ExtResource("16_1olh6")
 
 [node name="ArcadeMachine2" parent="." unique_id=340312715 instance=ExtResource("14_n02mf")]
 position = Vector2(28, 75)
@@ -391,6 +394,7 @@ flip_h = true
 
 [node name="ArcadeMachine3" parent="." unique_id=1047218894 instance=ExtResource("14_n02mf")]
 position = Vector2(28, 136)
+minigame_scene = ExtResource("17_t8f1g")
 
 [node name="Sprite2D" parent="ArcadeMachine3" index="0" unique_id=1679370901]
 material = SubResource("ShaderMaterial_1l4im")
