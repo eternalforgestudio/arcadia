@@ -22,45 +22,45 @@ point_count = 2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqxs8"]
 size = Vector2(1139, 20)
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" unique_id=1977578365]
 script = ExtResource("1_1exlk")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1541592747]
 position = Vector2(572, 324)
 
-[node name="Walls" type="StaticBody2D" parent="."]
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1119215956]
 
-[node name="Ceiling" type="CollisionShape2D" parent="Walls"]
+[node name="Ceiling" type="CollisionShape2D" parent="Walls" unique_id=1401118882]
 position = Vector2(573, -13)
 shape = SubResource("RectangleShape2D_tg0xg")
 
-[node name="Right Wall" type="CollisionShape2D" parent="Walls"]
+[node name="Right Wall" type="CollisionShape2D" parent="Walls" unique_id=1245331120]
 position = Vector2(1160, 325)
 shape = SubResource("RectangleShape2D_gl0tk")
 
-[node name="LeftWall" type="CollisionShape2D" parent="Walls"]
+[node name="LeftWall" type="CollisionShape2D" parent="Walls" unique_id=241542967]
 position = Vector2(-15, 327)
 shape = SubResource("RectangleShape2D_4odxf")
 
-[node name="Paddle" parent="." instance=ExtResource("1_ll22d")]
+[node name="Paddle" parent="." unique_id=699763702 instance=ExtResource("1_ll22d")]
 position = Vector2(575, 581)
 
-[node name="Ball" parent="." instance=ExtResource("2_nj764")]
+[node name="Ball" parent="." unique_id=1670938312 instance=ExtResource("2_nj764")]
 position = Vector2(641, 440)
 
-[node name="0f0f0378-e0Cc-4f27-aa82-be980337a7e4" type="Sprite2D" parent="."]
+[node name="0f0f0378-e0Cc-4f27-aa82-be980337a7e4" type="Sprite2D" parent="." unique_id=312102460]
 modulate = Color(1, 0.243137, 1, 0.164706)
 z_index = -2
 position = Vector2(561, 354)
 texture = ExtResource("4_ocycb")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1564013440]
 modulate = Color(1, 1, 1, 0.45098)
 position = Vector2(569, 331)
 amount = 200
+texture = ExtResource("5_1s6an")
 lifetime = 5.0
 preprocess = 5.0
-texture = ExtResource("5_1s6an")
 emission_shape = 1
 emission_sphere_radius = 9.23
 direction = Vector2(1, 1)
@@ -70,10 +70,10 @@ scale_amount_min = 0.0
 scale_amount_max = 0.01
 scale_amount_curve = SubResource("Curve_edqny")
 
-[node name="Deathzone" type="Area2D" parent="."]
+[node name="Deathzone" type="Area2D" parent="." unique_id=1613284899]
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone" unique_id=1233650826]
 position = Vector2(573.5, 663)
 shape = SubResource("RectangleShape2D_xqxs8")
 

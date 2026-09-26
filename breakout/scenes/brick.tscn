@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://tnch7cj8l600"]
+[gd_scene format=3 uid="uid://tnch7cj8l600"]
 
-[ext_resource type="Script" path="res://scripts/brick.gd" id="1_qfxug"]
-[ext_resource type="Texture2D" uid="uid://bb3fluwqgpvxf" path="res://assets/brick.png" id="2_edqyw"]
+[ext_resource type="Script" uid="uid://bbbxqvcfxj52v" path="res://breakout/scripts/brick.gd" id="1_qfxug"]
+[ext_resource type="Texture2D" uid="uid://bb3fluwqgpvxf" path="res://breakout/assets/brick.png" id="2_edqyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq6hu"]
 size = Vector2(32, 32)

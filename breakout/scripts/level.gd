@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func setupLevel():
 	#set row count based on level
-	rows = 2 + GameManager.level
+	rows = 2 + BreakoutGameManager.level
 	#put a cap on a max number of rows
 	if(rows > 9):
 		rows = 9

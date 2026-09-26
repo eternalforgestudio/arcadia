@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bqlljsh1u71ig" path="res://scenes/platformer scenes/level_one.tscn" id="16_1olh6"]
 [ext_resource type="PackedScene" uid="uid://d2p783gd30yb0" path="res://scenes/basketball scenes/basketball_game.tscn" id="17_t8f1g"]
 [ext_resource type="PackedScene" uid="uid://5dcini16xnwr" path="res://minigames-arcadia/Scenes/main.tscn" id="17_y25rf"]
+[ext_resource type="PackedScene" uid="uid://bwyc0jbak3c6s" path="res://breakout/scenes/level.tscn" id="19_4tl6b"]
 [ext_resource type="AudioStream" uid="uid://c2hxjqwpxgkux" path="res://assets/music/looperman-l-4338176-0415079-ourple-arcade.wav" id="20_qwig5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wmql"]
@@ -342,6 +343,18 @@ shader_parameter/replace_0 = Color(0.12941177, 0.12941177, 1, 1)
 shader_parameter/replace_1 = Color(0.12941177, 0.4, 1, 1)
 shader_parameter/replace_2 = Color(0, 0, 0.3764706, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qwig5"]
+shader = ExtResource("15_fgq0x")
+shader_parameter/original_0 = Color(0.78431374, 0.21960784, 0.21960784, 1)
+shader_parameter/original_1 = Color(0.9019608, 0.41568628, 0.41568628, 1)
+shader_parameter/original_2 = Color(0.6, 0.105882354, 0.12156863, 1)
+shader_parameter/replace_0 = Color(0.22745098, 0.3137255, 0.41960785, 1)
+shader_parameter/replace_1 = Color(0.10980392, 0.14509805, 0.25490198, 1)
+shader_parameter/replace_2 = Color(0.043137256, 0.07450981, 0.16862746, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4tl6b"]
+load_path = "res://.godot/imported/arcade-machine.png-0e8b5c8d7b8b5efbbce6353463dcf8c3.ctex"
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1l4im"]
 shader = ExtResource("15_fgq0x")
 shader_parameter/original_0 = Color(0.78431374, 0.21960784, 0.21960784, 1)
@@ -377,14 +390,14 @@ tile_set = ExtResource("1_me10n")
 
 [node name="Decorations" type="TileMapLayer" parent="." unique_id=39275860]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAACAAIABwABADcAAAAKAAcABwAUADYAAAAFAAIACQABAAEAAAAJAAIABgAJAAAAAAACAAAACgACAAAAAAAKAAAACgAEAAAAAAAFAAcAAAAEAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAIABwABADcAAAAFAAIACQABAAEAAAAJAAIABgAJAAAAAAACAAAACgACAAAAAAAKAAAACgAEAAAAAAAFAAcAAAAEAAAAAAAKAAYABwAUADYAAAA=")
 tile_set = SubResource("TileSet_txrqq")
 
 [node name="PlayerArcade" parent="." unique_id=1147089591 instance=ExtResource("1_pig0t")]
 position = Vector2(89, 120)
 
 [node name="ArcadeMachine" parent="." unique_id=1999305970 instance=ExtResource("14_n02mf")]
-position = Vector2(165, 75)
+position = Vector2(165, 69)
 minigame_scene = ExtResource("16_1olh6")
 
 [node name="ArcadeMachine2" parent="." unique_id=340312715 instance=ExtResource("14_n02mf")]
@@ -395,14 +408,22 @@ minigame_scene = ExtResource("17_y25rf")
 material = SubResource("ShaderMaterial_fgq0x")
 flip_h = true
 
-[node name="ArcadeMachine3" parent="." unique_id=1047218894 instance=ExtResource("14_n02mf")]
-position = Vector2(28, 136)
-minigame_scene = ExtResource("17_t8f1g")
+[node name="ArcadeMachine3" parent="." unique_id=1438431133 instance=ExtResource("14_n02mf")]
+position = Vector2(28, 140)
+minigame_scene = ExtResource("19_4tl6b")
 
 [node name="Sprite2D" parent="ArcadeMachine3" index="0" unique_id=1679370901]
+material = SubResource("ShaderMaterial_qwig5")
+texture = SubResource("CompressedTexture2D_4tl6b")
+flip_h = true
+
+[node name="ArcadeMachine4" parent="." unique_id=1047218894 instance=ExtResource("14_n02mf")]
+position = Vector2(169, 143)
+minigame_scene = ExtResource("17_t8f1g")
+
+[node name="Sprite2D" parent="ArcadeMachine4" index="0" unique_id=1679370901]
 material = SubResource("ShaderMaterial_1l4im")
 texture = SubResource("CompressedTexture2D_t8f1g")
-flip_h = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1026478812]
 stream = ExtResource("20_qwig5")
@@ -410,3 +431,4 @@ autoplay = true
 
 [editable path="ArcadeMachine2"]
 [editable path="ArcadeMachine3"]
+[editable path="ArcadeMachine4"]

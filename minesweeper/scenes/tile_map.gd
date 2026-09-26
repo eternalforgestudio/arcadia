@@ -189,7 +189,7 @@ func move_mine(old_pos):
 				get_parent().first_click = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	highlight_cell()
 	#scan mines
 	if (Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and 
