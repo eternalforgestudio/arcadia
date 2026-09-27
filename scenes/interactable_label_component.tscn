@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csc32en83vyad"]
 
-[ext_resource type="Texture2D" uid="uid://ttoxrphxpy1o" path="res://assets/sprites/dark-circle.png" id="1_fp6oa"]
+[ext_resource type="Texture2D" uid="uid://ttoxrphxpy1o" path="res://assets/ui/dark-circle.png" id="1_fp6oa"]
 [ext_resource type="FontFile" uid="uid://x5r23r2f8ygx" path="res://assets/fonts/PixelOperator8.ttf" id="2_a70io"]
 
 [node name="InteractableLabelComponent" type="Control" unique_id=1225591395]

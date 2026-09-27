@@ -5933,7 +5933,7 @@ script = ExtResource("1_62wcl")
 [node name="CharacterAnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1013843645]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_bj4t2")
-animation = &"female_white_walk_front"
+animation = &"male_dark_walk_front"
 
 [node name="OutfitAnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=247217439]
 position = Vector2(0, -9)

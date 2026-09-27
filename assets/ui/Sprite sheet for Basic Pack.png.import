@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ttoxrphxpy1o"
-path="res://.godot/imported/dark-circle.png-7a157fe55cd7b3bdd3cfe60dcae9f4d8.ctex"
+uid="uid://pxrgbkbdgict"
+path="res://.godot/imported/Sprite sheet for Basic Pack.png-bf2b9bae7639a80c22ddd29682f75ee3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/dark-circle.png"
-dest_files=["res://.godot/imported/dark-circle.png-7a157fe55cd7b3bdd3cfe60dcae9f4d8.ctex"]
+source_file="res://assets/ui/Sprite sheet for Basic Pack.png"
+dest_files=["res://.godot/imported/Sprite sheet for Basic Pack.png-bf2b9bae7639a80c22ddd29682f75ee3.ctex"]
 
 [params]
 
