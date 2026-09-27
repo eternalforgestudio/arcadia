@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://dn1msbka1132k"]
+
+[ext_resource type="Script" uid="uid://c22atppohygrv" path="res://scripts/PacMan scenes/the_pac_man.gd" id="1_2wuh4"]
+[ext_resource type="Texture2D" uid="uid://dot2is8dfjemi" path="res://assets/PacMan/PacMan himself.png" id="1_4gjox"]
+[ext_resource type="Texture2D" uid="uid://c6bux70f56d6a" path="res://assets/PacMan/Assets/Pacman/direction_pointer.png" id="3_vnq5n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cekgw"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2us3g"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhv3s"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2dia"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amcsa"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcay2"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5kb7"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18nlm"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1s2c"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wuh4"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnq5n"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06oq4"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r64h0"]
+atlas = ExtResource("1_4gjox")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_caror"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cekgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2us3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhv3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2dia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amcsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcay2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5kb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18nlm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1s2c")
+}],
+"loop": 0,
+"name": &"dying",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wuh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnq5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06oq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r64h0")
+}],
+"loop": 1,
+"name": &"motion",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_caror"]
+radius = 14.035668
+
+[node name="The PacMan" type="CharacterBody2D" unique_id=1573800967]
+motion_mode = 1
+script = ExtResource("1_2wuh4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=273077035]
+sprite_frames = SubResource("SpriteFrames_caror")
+animation = &"motion"
+autoplay = "motion"
+frame_progress = 0.9036478
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=263404163]
+shape = SubResource("CircleShape2D_caror")
+
+[node name="DirectionPointer" type="Sprite2D" parent="." unique_id=626996225]
+position = Vector2(20, 3.5527123e-14)
+rotation = 3.1415927
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_vnq5n")
