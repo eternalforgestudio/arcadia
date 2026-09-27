@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bvcdpksuj4pr" path="res://scripts/character_customization_panel.gd" id="2_c7tsm"]
 [ext_resource type="Texture2D" uid="uid://c20gjtkwjsjjk" path="res://assets/ui/male_gender_icon.png" id="2_ewd0e"]
 [ext_resource type="Texture2D" uid="uid://bd5g3g21fmcpg" path="res://assets/ui/female_gender_icon.png" id="3_m722y"]
+[ext_resource type="FontFile" uid="uid://blgv4hqmajser" path="res://assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="3_msmtk"]
 [ext_resource type="Texture2D" uid="uid://pxrgbkbdgict" path="res://assets/ui/Sprite sheet for Basic Pack.png" id="4_5dii3"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_nhmfu"]
@@ -49,6 +50,10 @@ grow_vertical = 2
 theme = ExtResource("1_xclks")
 theme_type_variation = &"DarkWoodPanel"
 script = ExtResource("2_c7tsm")
+gender = "male"
+hair_colors = ["black", "black2", "brown", "coral", "gold", "gold2", "gold3", "white"]
+skin_tones = ["dark", "wheatish", "white"]
+outfit_colors = ["classic", "blue", "brown", "cyan", "dress", "gold", "grey", "fuchsia", "magenta", "pink", "white"]
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=475416174]
 layout_mode = 2
@@ -66,11 +71,13 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=629260886]
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=629260886]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_msmtk")
+theme_override_font_sizes/font_size = 24
 text = "Name:"
 
-[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=867601149]
+[node name="NameLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=867601149]
 layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=164286563]
@@ -83,7 +90,6 @@ layout_mode = 2
 theme = ExtResource("1_xclks")
 theme_type_variation = &"GameToggleButton"
 toggle_mode = true
-button_pressed = true
 button_group = SubResource("ButtonGroup_nhmfu")
 icon = ExtResource("2_ewd0e")
 
@@ -91,6 +97,7 @@ icon = ExtResource("2_ewd0e")
 layout_mode = 2
 theme_type_variation = &"GameToggleButton"
 toggle_mode = true
+button_pressed = true
 button_group = SubResource("ButtonGroup_nhmfu")
 icon = ExtResource("3_m722y")
 
@@ -99,11 +106,11 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1092465286]
+[node name="HairLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1092465286]
 layout_mode = 2
 text = "Hair:"
 
-[node name="LeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1292782157]
+[node name="HairLeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1292782157]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 6)
@@ -112,11 +119,13 @@ texture_pressed = SubResource("AtlasTexture_5dii3")
 texture_hover = SubResource("AtlasTexture_ewd0e")
 texture_disabled = SubResource("AtlasTexture_m722y")
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=146620277]
+[node name="HairColorLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=146620277]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 text = "Hair"
+horizontal_alignment = 1
 
-[node name="RightTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=255626500]
+[node name="HairRightTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=255626500]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 6)
@@ -130,11 +139,11 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1934678818]
+[node name="SkinLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1934678818]
 layout_mode = 2
-text = "Skin tone:"
+text = "Skin:"
 
-[node name="LeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2136537072]
+[node name="SkinLeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2136537072]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 6)
@@ -143,11 +152,13 @@ texture_pressed = SubResource("AtlasTexture_5dii3")
 texture_hover = SubResource("AtlasTexture_ewd0e")
 texture_disabled = SubResource("AtlasTexture_m722y")
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=74845704]
+[node name="SkinToneLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=74845704]
+custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 text = "Skin"
+horizontal_alignment = 1
 
-[node name="RightTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1923780812]
+[node name="SkinRightTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1923780812]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 6)
@@ -161,11 +172,11 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1977301259]
+[node name="OutfitLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1977301259]
 layout_mode = 2
 text = "Outfit:"
 
-[node name="LeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1406390133]
+[node name="OutfitLeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1406390133]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 6)
@@ -174,11 +185,13 @@ texture_pressed = SubResource("AtlasTexture_5dii3")
 texture_hover = SubResource("AtlasTexture_ewd0e")
 texture_disabled = SubResource("AtlasTexture_m722y")
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=257443792]
+[node name="OutfitColorLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=257443792]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 text = "Outfit"
+horizontal_alignment = 1
 
-[node name="RightTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1368471132]
+[node name="OutfitRightTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1368471132]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 6)
@@ -186,3 +199,12 @@ texture_normal = SubResource("AtlasTexture_0iu5o")
 texture_pressed = SubResource("AtlasTexture_k5s75")
 texture_hover = SubResource("AtlasTexture_4dylx")
 texture_disabled = SubResource("AtlasTexture_o3bqf")
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer2/MaleButton" to="." method="_on_male_button_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer2/FemaleButton" to="." method="_on_female_button_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/HairLeftTextureButton" to="." method="_on_hair_left_texture_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/HairRightTextureButton" to="." method="_on_hair_right_texture_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/SkinLeftTextureButton" to="." method="_on_skin_left_texture_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/SkinRightTextureButton" to="." method="_on_skin_right_texture_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/OutfitLeftTextureButton" to="." method="_on_outfit_left_texture_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/OutfitRightTextureButton" to="." method="_on_outfit_right_texture_button_pressed"]

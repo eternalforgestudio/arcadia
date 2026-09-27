@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://dr7qs1aeaws7k"]
 
 [ext_resource type="Texture2D" uid="uid://pxrgbkbdgict" path="res://assets/ui/Sprite sheet for Basic Pack.png" id="1_e1eos"]
+[ext_resource type="FontFile" uid="uid://blgv4hqmajser" path="res://assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_c51s3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ct6d3"]
 atlas = ExtResource("1_e1eos")
@@ -95,3 +96,5 @@ GameToggleButton/styles/hover = SubResource("StyleBoxTexture_ct6d3")
 GameToggleButton/styles/hover_pressed = SubResource("StyleBoxTexture_sg807")
 GameToggleButton/styles/normal = SubResource("StyleBoxTexture_78q34")
 GameToggleButton/styles/pressed = SubResource("StyleBoxTexture_jh2c2")
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("2_c51s3")

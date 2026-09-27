@@ -7,25 +7,25 @@ extends NodeState
 
 func _on_physics_process(_delta: float) -> void:
 	if player.direction == Vector2.UP:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_idle_back")
-		outfit_animated_sprite.play(outfit_name + "_idle_back")
-		hair_animated_sprite.play(hair_color + "_idle_back")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_idle_back")
+		outfit_animated_sprite.play(player.outfit_color + "_idle_back")
+		hair_animated_sprite.play(player.hair_color + "_idle_back")
 	elif player.direction == Vector2.DOWN:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_idle_front")
-		outfit_animated_sprite.play(outfit_name + "_idle_front")
-		hair_animated_sprite.play(hair_color + "_idle_front")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_idle_front")
+		outfit_animated_sprite.play(player.outfit_color + "_idle_front")
+		hair_animated_sprite.play(player.hair_color + "_idle_front")
 	elif player.direction == Vector2.LEFT:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_idle_left")
-		outfit_animated_sprite.play(outfit_name + "_idle_left")
-		hair_animated_sprite.play(hair_color + "_idle_left")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_idle_left")
+		outfit_animated_sprite.play(player.outfit_color + "_idle_left")
+		hair_animated_sprite.play(player.hair_color + "_idle_left")
 	elif player.direction == Vector2.RIGHT:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_idle_right")
-		outfit_animated_sprite.play(outfit_name + "_idle_right")
-		hair_animated_sprite.play(hair_color + "_idle_right")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_idle_right")
+		outfit_animated_sprite.play(player.outfit_color + "_idle_right")
+		hair_animated_sprite.play(player.hair_color + "_idle_right")
 	else:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_idle_front")
-		outfit_animated_sprite.play(outfit_name + "_idle_front")
-		hair_animated_sprite.play(hair_color + "_idle_front")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_idle_front")
+		outfit_animated_sprite.play(player.outfit_color + "_idle_front")
+		hair_animated_sprite.play(player.hair_color + "_idle_front")
 
 func _on_next_transition() -> void:
 	GameInputEvents.movement_input()

@@ -10,21 +10,21 @@ func _on_physics_process(_delta: float) -> void:
 	var direction: Vector2 = GameInputEvents.movement_input()
 	
 	if direction == Vector2.UP:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_walk_back")
-		outfit_animated_sprite.play(outfit_name + "_walk_back")
-		hair_animated_sprite.play(hair_color + "_walk_back")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_walk_back")
+		outfit_animated_sprite.play(player.outfit_color + "_walk_back")
+		hair_animated_sprite.play(player.hair_color + "_walk_back")
 	elif direction == Vector2.DOWN:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_walk_front")
-		outfit_animated_sprite.play(outfit_name + "_walk_front")
-		hair_animated_sprite.play(hair_color + "_walk_front")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_walk_front")
+		outfit_animated_sprite.play(player.outfit_color + "_walk_front")
+		hair_animated_sprite.play(player.hair_color + "_walk_front")
 	elif direction == Vector2.LEFT:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_walk_left")
-		outfit_animated_sprite.play(outfit_name + "_walk_left")
-		hair_animated_sprite.play(hair_color + "_walk_left")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_walk_left")
+		outfit_animated_sprite.play(player.outfit_color + "_walk_left")
+		hair_animated_sprite.play(player.hair_color + "_walk_left")
 	elif direction == Vector2.RIGHT:
-		character_animated_sprite.play(gender + "_" + skin_tone + "_walk_right")
-		outfit_animated_sprite.play(outfit_name + "_walk_right")
-		hair_animated_sprite.play(hair_color + "_walk_right")
+		character_animated_sprite.play(player.gender + "_" + player.skin_tone + "_walk_right")
+		outfit_animated_sprite.play(player.outfit_color + "_walk_right")
+		hair_animated_sprite.play(player.hair_color + "_walk_right")
 	if direction != Vector2.ZERO:
 		player.direction = direction
 	
