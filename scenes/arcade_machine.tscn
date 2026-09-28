@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lh7hqxrph2ou"]
 
-[ext_resource type="Script" uid="uid://c60xuisw8wctr" path="res://scripts/arcade_machine.gd" id="1_8oa32"]
+[ext_resource type="Script" uid="uid://c60xuisw8wctr" path="res://scripts/arcade/arcade_machine.gd" id="1_8oa32"]
 [ext_resource type="Texture2D" uid="uid://lrvlhgd8o7gg" path="res://assets/sprites/arcade-machine.png" id="1_idp8s"]
 [ext_resource type="PackedScene" uid="uid://5wagmcj6m4kb" path="res://scenes/interactable_component.tscn" id="3_6qixe"]
 [ext_resource type="PackedScene" uid="uid://csc32en83vyad" path="res://scenes/interactable_label_component.tscn" id="4_6qixe"]

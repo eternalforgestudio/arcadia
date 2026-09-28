@@ -16,12 +16,14 @@
 [ext_resource type="Texture2D" uid="uid://d4by6ubtbewx3" path="res://assets/MetroCity/Interior/Home/Miscellaneous-Sheet.png" id="12_ibn3x"]
 [ext_resource type="PackedScene" uid="uid://lh7hqxrph2ou" path="res://scenes/arcade_machine.tscn" id="14_n02mf"]
 [ext_resource type="Shader" uid="uid://bkh6oixjs5hgl" path="res://shaders/arcade_machine.gdshader" id="15_fgq0x"]
-[ext_resource type="PackedScene" uid="uid://bqlljsh1u71ig" path="res://scenes/platformer scenes/level_one.tscn" id="16_1olh6"]
-[ext_resource type="PackedScene" uid="uid://d2p783gd30yb0" path="res://scenes/basketball scenes/basketball_game.tscn" id="17_t8f1g"]
+[ext_resource type="PackedScene" uid="uid://bqlljsh1u71ig" path="res://scenes/minigames/platformer scenes/level_one.tscn" id="16_1olh6"]
+[ext_resource type="PackedScene" uid="uid://d2p783gd30yb0" path="res://scenes/minigames/basketball scenes/basketball_game.tscn" id="17_t8f1g"]
 [ext_resource type="PackedScene" uid="uid://5dcini16xnwr" path="res://minigames-arcadia/Scenes/main.tscn" id="17_y25rf"]
 [ext_resource type="PackedScene" uid="uid://bwyc0jbak3c6s" path="res://breakout/scenes/level.tscn" id="19_4tl6b"]
 [ext_resource type="AudioStream" uid="uid://c2hxjqwpxgkux" path="res://assets/music/looperman-l-4338176-0415079-ourple-arcade.wav" id="20_qwig5"]
 [ext_resource type="PackedScene" uid="uid://daht37odkbh10" path="res://scenes/character_customization_panel.tscn" id="22_ceys4"]
+[ext_resource type="Theme" uid="uid://dr7qs1aeaws7k" path="res://themes/arcade_ui_theme.tres" id="23_ibn3x"]
+[ext_resource type="Script" uid="uid://xle3mys5c74q" path="res://scripts/arcade/score_label.gd" id="24_0wmql"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wmql"]
 texture = ExtResource("2_xwleh")
@@ -398,7 +400,7 @@ tile_set = SubResource("TileSet_txrqq")
 position = Vector2(89, 120)
 
 [node name="ArcadeMachine" parent="." unique_id=1999305970 instance=ExtResource("14_n02mf")]
-position = Vector2(165, 69)
+position = Vector2(169, 69)
 minigame_scene = ExtResource("16_1olh6")
 
 [node name="ArcadeMachine2" parent="." unique_id=340312715 instance=ExtResource("14_n02mf")]
@@ -439,6 +441,27 @@ offset_top = 186.5
 offset_right = -652.0
 offset_bottom = -186.5
 player = NodePath("../../PlayerArcade")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1459206355]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/MarginContainer" unique_id=851691675]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("23_ibn3x")
+theme_type_variation = &"GameLabel"
+text = "Score: 0"
+script = ExtResource("24_0wmql")
 
 [editable path="ArcadeMachine2"]
 [editable path="ArcadeMachine3"]

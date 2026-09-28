@@ -1,6 +1,6 @@
 extends Area2D
 
-@export_file("*.tscn") var level_five_path: String = "res://scenes/platformer scenes/level_five.tscn"
+@export_file("*.tscn") var level_five_path: String = "res://scenes/minigames/platformer scenes/level_five.tscn"
 
 
 

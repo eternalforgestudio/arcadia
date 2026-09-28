@@ -1,6 +1,6 @@
 extends Area2D
 
-@export_file("*.tscn") var level_four_path: String = "res://scenes/platformer scenes/level_four.tscn"
+@export_file("*.tscn") var level_four_path: String = "res://scenes/minigames/platformer scenes/level_four.tscn"
 
 
 func _on_body_entered(body: Node2D) -> void:

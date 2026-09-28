@@ -52,7 +52,7 @@ script = ExtResource("2_c7tsm")
 gender = "male"
 hair_colors = ["black", "black2", "brown", "coral", "gold", "gold2", "gold3", "white"]
 skin_tones = ["dark", "wheatish", "white"]
-outfit_colors = ["classic", "blue", "brown", "cyan", "dress", "gold", "grey", "fuchsia", "magenta", "pink", "white"]
+outfit_colors = ["classic", "blue", "brown", "cyan", "dress", "gold", "grey", "fuchsia", "magenta", "pink", "shorts"]
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=475416174]
 layout_mode = 2

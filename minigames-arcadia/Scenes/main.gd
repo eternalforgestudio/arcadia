@@ -16,6 +16,7 @@ func _on_score_left_body_entered(_body: Node2D) -> void:
 
 func _on_score_right_body_entered(_body: Node2D) -> void:
 	score[0] += 1
+	GameManager.score += 5
 	$Hud/Player.text = str(score[0])
 	$Timer.start()
 

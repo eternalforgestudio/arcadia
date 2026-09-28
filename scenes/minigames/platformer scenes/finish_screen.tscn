@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpuh8yjiftixb"]
 
-[ext_resource type="Script" uid="uid://b4swa3kpfelmj" path="res://scripts/platformer scripts/Finish_Screen.gd" id="1_bxdan"]
+[ext_resource type="Script" uid="uid://b4swa3kpfelmj" path="res://scripts/minigames/platformer scripts/Finish_Screen.gd" id="1_bxdan"]
 [ext_resource type="Texture2D" uid="uid://ehbj7vcisj4e" path="res://assets/Platformer/final screan.png" id="2_gnwf1"]
 [ext_resource type="Texture2D" uid="uid://wke5mo5lg7dj" path="res://assets/Platformer/play again.png" id="3_mdy3r"]
 [ext_resource type="Texture2D" uid="uid://dhxo3vv0lk37g" path="res://assets/Platformer/home.png" id="4_bxw17"]

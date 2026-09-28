@@ -8,6 +8,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		if BasketballGameManager.has_scored:
 			BasketballGameManager.has_scored = true
+			GameManager.score += 3
 			get_tree().call_deferred("reload_current_scene")
 		else:
 			game_over_panel.visible = true

@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export_file("*.tscn") var level_one_path: String = "res://scenes/platformer scenes/level_one.tscn"
+@export_file("*.tscn") var level_one_path: String = "res://scenes/minigames/platformer scenes/level_one.tscn"
 @export_file("*.tscn") var home_scene_path: String = "res://scenes/arcade.tscn"
 	
 

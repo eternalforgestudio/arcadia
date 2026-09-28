@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://ckkhyntums1v0"]
 
-[ext_resource type="Script" uid="uid://dp1iiaiqk1cu" path="res://scripts/player_arcade.gd" id="1_62wcl"]
+[ext_resource type="Script" uid="uid://dp1iiaiqk1cu" path="res://scripts/arcade/player_arcade.gd" id="1_62wcl"]
 [ext_resource type="Texture2D" uid="uid://drilhj0xkeugo" path="res://assets/MetroCity/Characters/CharacterModel/Character Model.png" id="2_jbsty"]
 [ext_resource type="Texture2D" uid="uid://dk566vkotcleu" path="res://assets/MetroCity/Characters/Outfits/Outfit6.png" id="3_7xe3a"]
 [ext_resource type="Texture2D" uid="uid://b3gnhvybebpng" path="res://assets/MetroCity/Characters/Outfits/Outfit5.png" id="3_hecyb"]
 [ext_resource type="Texture2D" uid="uid://bg2pd310qjgwq" path="res://assets/MetroCity/Characters/Outfits/Outfit1.png" id="4_ds7pp"]
 [ext_resource type="Texture2D" uid="uid://ce66viboaodgn" path="res://assets/MetroCity/Characters/Hair/Hairs.png" id="4_uodr6"]
-[ext_resource type="Script" uid="uid://c1f7yh228rq3r" path="res://scripts/node_state_machine.gd" id="5_6ya2o"]
+[ext_resource type="Script" uid="uid://c1f7yh228rq3r" path="res://scripts/state_machine/node_state_machine.gd" id="5_6ya2o"]
 [ext_resource type="Texture2D" uid="uid://8h88dw7u28tk" path="res://assets/MetroCity/Characters/Outfits/Outfit2.png" id="5_hkkiq"]
-[ext_resource type="Script" uid="uid://dkw2sf12jb03q" path="res://scripts/idle_state.gd" id="6_ds7pp"]
+[ext_resource type="Script" uid="uid://dkw2sf12jb03q" path="res://scripts/state_machine/idle_state.gd" id="6_ds7pp"]
 [ext_resource type="Texture2D" uid="uid://gnm5gmauroj4" path="res://assets/MetroCity/Characters/Outfits/Outfit3.png" id="6_qvl5a"]
 [ext_resource type="Texture2D" uid="uid://dlyk84ipumjy3" path="res://assets/MetroCity/Characters/Outfits/Outfit4.png" id="6_uquvy"]
-[ext_resource type="Script" uid="uid://cu56v0srsde32" path="res://scripts/walk_state.gd" id="7_hkkiq"]
+[ext_resource type="Script" uid="uid://cu56v0srsde32" path="res://scripts/state_machine/walk_state.gd" id="7_hkkiq"]
 [ext_resource type="Texture2D" uid="uid://hcv2go0ltwwa" path="res://assets/MetroCity/Characters/Outfits/Suit1.png" id="8_nhmfu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_md7v6"]
@@ -3912,7 +3912,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_1ytxf")
 }],
 "loop": 1,
-"name": &"white_idle_back",
+"name": &"shorts_idle_back",
 "speed": 8.0
 }, {
 "frames": [{
@@ -3920,7 +3920,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_p6s70")
 }],
 "loop": 1,
-"name": &"white_idle_front",
+"name": &"shorts_idle_front",
 "speed": 8.0
 }, {
 "frames": [{
@@ -3928,7 +3928,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_le7r1")
 }],
 "loop": 1,
-"name": &"white_idle_left",
+"name": &"shorts_idle_left",
 "speed": 8.0
 }, {
 "frames": [{
@@ -3936,7 +3936,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_8dq3u")
 }],
 "loop": 1,
-"name": &"white_idle_right",
+"name": &"shorts_idle_right",
 "speed": 8.0
 }, {
 "frames": [{
@@ -3959,7 +3959,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_hcf6h")
 }],
 "loop": 1,
-"name": &"white_walk_back",
+"name": &"shorts_walk_back",
 "speed": 8.0
 }, {
 "frames": [{
@@ -3982,7 +3982,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_iip5q")
 }],
 "loop": 1,
-"name": &"white_walk_front",
+"name": &"shorts_walk_front",
 "speed": 8.0
 }, {
 "frames": [{
@@ -4005,7 +4005,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_go6md")
 }],
 "loop": 1,
-"name": &"white_walk_left",
+"name": &"shorts_walk_left",
 "speed": 8.0
 }, {
 "frames": [{
@@ -4028,7 +4028,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_whk27")
 }],
 "loop": 1,
-"name": &"white_walk_right",
+"name": &"shorts_walk_right",
 "speed": 8.0
 }]
 
@@ -5930,13 +5930,12 @@ animation = &"male_dark_walk_front"
 [node name="OutfitAnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=247217439]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_mqvok")
-animation = &"fuchsia_idle_back"
+animation = &"shorts_walk_right"
 
 [node name="HairAnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1468990908]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_0h62n")
-animation = &"black2_walk_left"
-frame_progress = 0.002451369
+animation = &"white_idle_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508119269]
 shape = SubResource("RectangleShape2D_bj4t2")
