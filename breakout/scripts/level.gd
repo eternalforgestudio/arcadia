@@ -48,7 +48,7 @@ func setupLevel():
 				
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 # https://docs.godotengine.org/en/3.1/classes/class_color.html
 func getColors():

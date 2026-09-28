@@ -4,6 +4,6 @@ extends Node2D
 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel") and home_scene_path != "":
 		get_tree().call_deferred("change_scene_to_file", home_scene_path)

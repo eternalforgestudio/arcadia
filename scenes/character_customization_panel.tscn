@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://bvcdpksuj4pr" path="res://scripts/character_customization_panel.gd" id="2_c7tsm"]
 [ext_resource type="Texture2D" uid="uid://c20gjtkwjsjjk" path="res://assets/ui/male_gender_icon.png" id="2_ewd0e"]
 [ext_resource type="Texture2D" uid="uid://bd5g3g21fmcpg" path="res://assets/ui/female_gender_icon.png" id="3_m722y"]
-[ext_resource type="FontFile" uid="uid://blgv4hqmajser" path="res://assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="3_msmtk"]
 [ext_resource type="Texture2D" uid="uid://pxrgbkbdgict" path="res://assets/ui/Sprite sheet for Basic Pack.png" id="4_5dii3"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_nhmfu"]
@@ -73,8 +72,8 @@ alignment = 1
 
 [node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=629260886]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_msmtk")
-theme_override_font_sizes/font_size = 24
+theme = ExtResource("1_xclks")
+theme_type_variation = &"GameLabel"
 text = "Name:"
 
 [node name="NameLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=867601149]
@@ -108,6 +107,8 @@ alignment = 1
 
 [node name="HairLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1092465286]
 layout_mode = 2
+theme = ExtResource("1_xclks")
+theme_type_variation = &"GameLabel"
 text = "Hair:"
 
 [node name="HairLeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1292782157]
@@ -122,6 +123,8 @@ texture_disabled = SubResource("AtlasTexture_m722y")
 [node name="HairColorLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=146620277]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme = ExtResource("1_xclks")
+theme_type_variation = &"GameLabel"
 text = "Hair"
 horizontal_alignment = 1
 
@@ -141,6 +144,8 @@ alignment = 1
 
 [node name="SkinLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1934678818]
 layout_mode = 2
+theme = ExtResource("1_xclks")
+theme_type_variation = &"GameLabel"
 text = "Skin:"
 
 [node name="SkinLeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2136537072]
@@ -155,6 +160,8 @@ texture_disabled = SubResource("AtlasTexture_m722y")
 [node name="SkinToneLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=74845704]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
+theme = ExtResource("1_xclks")
+theme_type_variation = &"GameLabel"
 text = "Skin"
 horizontal_alignment = 1
 
@@ -174,6 +181,8 @@ alignment = 1
 
 [node name="OutfitLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1977301259]
 layout_mode = 2
+theme = ExtResource("1_xclks")
+theme_type_variation = &"GameLabel"
 text = "Outfit:"
 
 [node name="OutfitLeftTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1406390133]
@@ -188,6 +197,8 @@ texture_disabled = SubResource("AtlasTexture_m722y")
 [node name="OutfitColorLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=257443792]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme = ExtResource("1_xclks")
+theme_type_variation = &"GameLabel"
 text = "Outfit"
 horizontal_alignment = 1
 
@@ -200,6 +211,17 @@ texture_pressed = SubResource("AtlasTexture_k5s75")
 texture_hover = SubResource("AtlasTexture_4dylx")
 texture_disabled = SubResource("AtlasTexture_o3bqf")
 
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=240938736]
+layout_mode = 2
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=819630441]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme = ExtResource("1_xclks")
+theme_type_variation = &"GameButton"
+text = "Confirm"
+
 [connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer2/MaleButton" to="." method="_on_male_button_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer2/FemaleButton" to="." method="_on_female_button_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/HairLeftTextureButton" to="." method="_on_hair_left_texture_button_pressed"]
@@ -208,3 +230,4 @@ texture_disabled = SubResource("AtlasTexture_o3bqf")
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/SkinRightTextureButton" to="." method="_on_skin_right_texture_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/OutfitLeftTextureButton" to="." method="_on_outfit_left_texture_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/OutfitRightTextureButton" to="." method="_on_outfit_right_texture_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer6/ConfirmButton" to="." method="_on_confirm_button_pressed"]

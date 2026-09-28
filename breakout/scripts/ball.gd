@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 				collision.get_collider().hit() #call hit() on the brick we just collided with
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -40,5 +40,5 @@ func gameOver():
 	get_tree().call_deferred("reload_current_scene")	#reload scene
 
 #restart level when ball off screen
-func _on_deathzone_body_entered(body: Node2D) -> void:
+func _on_deathzone_body_entered(_body: Node2D) -> void:
 	gameOver()

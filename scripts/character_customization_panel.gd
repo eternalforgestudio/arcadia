@@ -3,6 +3,8 @@ extends PanelContainer
 
 @export var player: Player
 
+@onready var name_line_edit: LineEdit = $MarginContainer/VBoxContainer/HBoxContainer/NameLineEdit
+
 @export var gender: String
 @export var hair_colors: Array
 @export var skin_tones: Array
@@ -17,19 +19,27 @@ var current_skin_tone_index: int = 0
 var current_outfit_color_index: int = 0
 
 func _ready() -> void:
-	player.gender = "female"
-	player.hair_color = hair_colors[0]
-	player.skin_tone = skin_tones[0]
-	player.outfit_color = outfit_colors[0]
-	hair_color_label.text = hair_colors[0]
-	skin_tone_label.text = skin_tones[0]
-	outfit_color_label.text = outfit_colors[0]
+	if not GameManager.character_customized:
+		player.gender = "female"
+		player.hair_color = hair_colors[0]
+		player.skin_tone = skin_tones[0]
+		player.outfit_color = outfit_colors[0]
+		hair_color_label.text = hair_colors[0]
+		skin_tone_label.text = skin_tones[0]
+		outfit_color_label.text = outfit_colors[0]
+	else:
+		player.gender = GameManager.gender
+		player.hair_color = GameManager.hair_color
+		player.skin_tone = GameManager.skin_tone
+		player.outfit_color = GameManager.outfit_color
+		visible = false
+		process_mode = Node.PROCESS_MODE_DISABLED
 
-func _on_male_button_toggled(toggled_on: bool) -> void:
+func _on_male_button_toggled(_toggled_on: bool) -> void:
 	player.gender = "male"
 
 
-func _on_female_button_toggled(toggled_on: bool) -> void:
+func _on_female_button_toggled(_toggled_on: bool) -> void:
 	player.gender = "female"
 
 
@@ -67,3 +77,15 @@ func _on_outfit_right_texture_button_pressed() -> void:
 	current_outfit_color_index = (current_outfit_color_index + 1) % outfit_colors.size()
 	player.outfit_color = outfit_colors[current_outfit_color_index]
 	outfit_color_label.text = outfit_colors[current_outfit_color_index]
+
+
+func _on_confirm_button_pressed() -> void:
+	GameInputEvents.can_move = true
+	GameManager.character_customized = true
+	GameManager.player_name = name_line_edit.text
+	GameManager.gender = player.gender
+	GameManager.hair_color = player.hair_color
+	GameManager.skin_tone = player.skin_tone
+	GameManager.outfit_color = player.outfit_color
+	visible = false
+	process_mode = Node.PROCESS_MODE_DISABLED

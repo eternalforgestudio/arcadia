@@ -433,16 +433,12 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=278526795]
 
 [node name="CharacterCustomizationPanel" parent="CanvasLayer" unique_id=1555079943 node_paths=PackedStringArray("player") instance=ExtResource("22_ceys4")]
-custom_maximum_size = Vector2(300, 275)
+custom_maximum_size = Vector2(300, 300)
 offset_left = 200.0
 offset_top = 186.5
 offset_right = -652.0
 offset_bottom = -186.5
 player = NodePath("../../PlayerArcade")
-
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=1225808393]
-offset_right = 8.0
-offset_bottom = 8.0
 
 [editable path="ArcadeMachine2"]
 [editable path="ArcadeMachine3"]

@@ -14,6 +14,93 @@ texture_margin_top = 7.0
 texture_margin_right = 7.0
 texture_margin_bottom = 7.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c51s3"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-bf2b9bae7639a80c22ddd29682f75ee3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg807"]
+atlas = SubResource("CompressedTexture2D_c51s3")
+region = Rect2(59, 11, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bttmg"]
+texture = SubResource("AtlasTexture_sg807")
+texture_margin_left = 4.0
+texture_margin_top = 3.8918953
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78q34"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-bf2b9bae7639a80c22ddd29682f75ee3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh2c2"]
+atlas = SubResource("CompressedTexture2D_78q34")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_baabr"]
+texture = SubResource("AtlasTexture_jh2c2")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 26, 28)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h7ibe"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-bf2b9bae7639a80c22ddd29682f75ee3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v73ol"]
+atlas = SubResource("CompressedTexture2D_h7ibe")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6mg6"]
+texture = SubResource("AtlasTexture_v73ol")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 26, 28)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ymkmy"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-bf2b9bae7639a80c22ddd29682f75ee3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ramw6"]
+atlas = SubResource("CompressedTexture2D_ymkmy")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hu5e3"]
+texture = SubResource("AtlasTexture_ramw6")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_23cm2"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-bf2b9bae7639a80c22ddd29682f75ee3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jue6b"]
+atlas = SubResource("CompressedTexture2D_23cm2")
+region = Rect2(11, 107, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1xwv"]
+texture = SubResource("AtlasTexture_jue6b")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8cupk"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-bf2b9bae7639a80c22ddd29682f75ee3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_654if"]
+atlas = SubResource("CompressedTexture2D_8cupk")
+region = Rect2(59, 107, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85571"]
+texture = SubResource("AtlasTexture_654if")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gd5d"]
 atlas = ExtResource("1_e1eos")
 region = Rect2(59, 11, 26, 26)
@@ -89,6 +176,18 @@ texture_margin_bottom = 4.0
 [resource]
 DarkWoodPanel/base_type = &"PanelContainer"
 DarkWoodPanel/styles/panel = SubResource("StyleBoxTexture_c51s3")
+GameButton/base_type = &"Button"
+GameButton/font_sizes/font_size = 24
+GameButton/fonts/font = ExtResource("2_c51s3")
+GameButton/styles/disabled = SubResource("StyleBoxTexture_bttmg")
+GameButton/styles/focus = SubResource("StyleBoxTexture_baabr")
+GameButton/styles/hover = SubResource("StyleBoxTexture_g6mg6")
+GameButton/styles/hover_pressed = SubResource("StyleBoxTexture_hu5e3")
+GameButton/styles/normal = SubResource("StyleBoxTexture_h1xwv")
+GameButton/styles/pressed = SubResource("StyleBoxTexture_85571")
+GameLabel/base_type = &"Label"
+GameLabel/font_sizes/font_size = 24
+GameLabel/fonts/font = ExtResource("2_c51s3")
 GameToggleButton/base_type = &"Button"
 GameToggleButton/styles/disabled = SubResource("StyleBoxTexture_vnn0b")
 GameToggleButton/styles/focus = SubResource("StyleBoxTexture_om7lw")
@@ -96,5 +195,3 @@ GameToggleButton/styles/hover = SubResource("StyleBoxTexture_ct6d3")
 GameToggleButton/styles/hover_pressed = SubResource("StyleBoxTexture_sg807")
 GameToggleButton/styles/normal = SubResource("StyleBoxTexture_78q34")
 GameToggleButton/styles/pressed = SubResource("StyleBoxTexture_jh2c2")
-Label/font_sizes/font_size = 24
-Label/fonts/font = ExtResource("2_c51s3")

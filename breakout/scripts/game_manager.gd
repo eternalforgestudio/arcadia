@@ -6,7 +6,7 @@ var level = 1 #player's current level
 # add points to score (called from elsewhere)
 func addPoints(points):
 	score += points
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if get_tree().current_scene:
 		if get_tree().current_scene.name != "Level":
 			$CanvasLayer/ScoreLabel.hide()

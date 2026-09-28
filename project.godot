@@ -18,8 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 BreakoutGameManager="*uid://dpg3s6quigp25"
-GameManager="*uid://dclg6ptiyhccg"
+BasketballGameManager="*uid://dclg6ptiyhccg"
 GlobalGameExit="*uid://c7kss23rytq2q"
+GameManager="*uid://fgjvjmhw1qw3"
 
 [display]
 
